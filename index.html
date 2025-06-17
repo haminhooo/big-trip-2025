@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Big Trip July 2025 – Schedule</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .search-box {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .itinerary {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    details {
+      margin-bottom: 10px;
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    summary {
+      font-weight: bold;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+    .city-schedule {
+      margin-top: 10px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Big Trip July 2025 – Schedule</h1>
+
+<div class="search-box">
+  <input type="text" id="searchInput" onkeyup="searchItinerary()" placeholder="Search itinerary...">
+</div>
+
+<div class="itinerary">
+
+  <details>
+    <summary>📍 Dubrovnik (July 23–24)</summary>
+    <div class="city-schedule">
+      <ul>
+        <li>July 23 – 08:15 – Arrival at Dubrovnik Airport</li>
+        <li>09:30 – Check-in and drop luggage</li>
+        <li>10:00 – Explore Old Town, walk City Walls</li>
+        <li>13:00 – Lunch at Taj Mahal Restaurant (Bosnian cuisine)</li>
+        <li>15:00 – Game of Thrones Walking Tour</li>
+        <li>18:00 – Sunset at Fort Lovrijenac</li>
+        <li>20:00 – Dinner at Proto (Dalmatian seafood)</li>
+        <li>22:00 – Drinks at Buža Bar (cliff bar)</li>
+        <li>July 24 – 09:45 – Flight to Oslo</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>📍 Oslo (July 24–25)</summary>
+    <div class="city-schedule">
+      <ul>
+        <li>July 24 – 12:40 – Arrival at Oslo Airport</li>
+        <li>14:00 – Check-in and snack</li>
+        <li>15:00 – Visit Munch Museum</li>
+        <li>17:00 – Stroll through Vigeland Park</li>
+        <li>19:00 – Dinner at Lofoten Fiskerestaurant</li>
+        <li>21:00 – Night walk near Oslofjord / Aker Brygge</li>
+        <li>July 25 – 08:00 – Breakfast</li>
+        <li>10:00 – Visit National Museum</li>
+        <li>12:00 – Ferry to Bygdøy Peninsula</li>
+        <li>13:00 – Fram Museum or Kon-Tiki</li>
+        <li>15:00 – Head to Airport</li>
+        <li>17:00 – Flight to Madrid</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>📍 Madrid (July 25–28)</summary>
+    <div class="city-schedule">
+      <ul>
+        <li>July 25 – 18:45 – Arrival in Madrid</li>
+        <li>20:00 – Dinner at Bodega de la Ardosa</li>
+        <li>22:00 – Nightlife: 1862 Dry Bar or rooftop Azotea del Círculo</li>
+        <li>July 26 – 10:00 – San Miguel Market + Prado Museum</li>
+        <li>13:00 – Lunch at Casa Lucio (huevos rotos)</li>
+        <li>16:00 – Chill in Retiro Park + Palacio de Cristal</li>
+        <li>20:00 – Tapas crawl in La Latina or Malasaña</li>
+        <li>July 27 – Day Trip: Toledo + Segovia combined tour</li>
+        <li>20:00 – Return to Madrid + Dinner</li>
+        <li>July 28 – 07:30 – Light breakfast + checkout</li>
+        <li>09:44 – Train departure</li>
+      </ul>
+    </div>
+  </details>
+
+</div>
+
+<script>
+  function searchItinerary() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let items = document.querySelectorAll('.city-schedule li');
+
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      if (text.includes(input)) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
